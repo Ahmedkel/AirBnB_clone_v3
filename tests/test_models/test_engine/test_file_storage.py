@@ -145,11 +145,8 @@ class TestStorageMethods(unittest.TestCase):
 
     def test_count(self):
         """Test the count method."""
-        # Test that count method returns 0 for invalid class
         self.assertEqual(storage.count(str), 0)
 
-        # Test that count method returns the correct count for valid class
         self.assertEqual(storage.count(State), len(storage.all(State)))
 
-        # Test that count method returns the correct count for no class
         self.assertEqual(storage.count(), len(storage.all()))
